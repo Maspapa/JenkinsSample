@@ -23,7 +23,7 @@ pipeline {
 
         stage('Copy Dependences') {
             steps {
-                copyArtifacts filter: '*.md', fingerprintArtifacts: true, projectName: 'Mason/1.build/$BRANCH_NAME', selector: lastSuccessful(), target: './'
+                copyArtifacts filter: '*.md', fingerprintArtifacts: true, projectName: 'Mason/1_build/$BRANCH_NAME', selector: lastSuccessful(), target: './'
 
             }
         }
