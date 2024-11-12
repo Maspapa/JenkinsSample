@@ -21,11 +21,16 @@ pipeline {
                 }
             }
         }
+        stage('Copy Dependences') {
+            steps {
+                copyArtifacts filter: '*.md', fingerprintArtifacts: true, projectName: 'Mason/1_build/$BRANCH_NAME', selector: lastSuccessful(), target: './'
 
+            }
+        }
     }
     post {
         success {
-            archiveArtifacts artifacts: '*.txt', fingerprint: true, onlyIfSuccessful: false, defaultExcludes: false
+            archiveArtifacts artifacts: '**/*', fingerprint: true, onlyIfSuccessful: false, defaultExcludes: false
         }
     }
 }
