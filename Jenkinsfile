@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        node {
+            label any
+            customWorkspace '/some/other/path'
+        }
+    }
     
     stages {
         stage('Clean Workspace') { 
