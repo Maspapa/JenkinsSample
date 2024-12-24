@@ -1,10 +1,17 @@
 pipeline {
     agent any
     
+    environment {
+        WORKSPACE = "D:/Jenkins/workspace/${env.JOB_NAME}"
+        WORKSPACEDir ="D:/Jenkins/workspace/${env.JOB_NAME}"
+    }
     stages {
         stage('Clean Workspace') { 
             steps {
                 cleanWs()
+                script {
+                        echo "env.BRANCH_NAME : ${env.BRANCH_NAME} and env.JOB_NAME : ${env.JOB_NAME} and workspace is ${$WORKSPACE}"
+                    }
             }
         }
         stage('Git Checkout') { 
