@@ -2,7 +2,7 @@ pipeline {
     agent {
         node {
             label 'main'
-            customWorkspace "${WORKSPACE}/${env.JOB_NAME}"
+            customWorkspace "${env.WORKSPACE}/${env.JOB_NAME}"
         }
     }
     stages {
