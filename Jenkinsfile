@@ -2,7 +2,7 @@ pipeline {
     agent {
         node {
             label 'main'
-            customWorkspace '/GCDS/'
+            customWorkspace "${WORKSPACE}/${env.JOB_NAME}"
         }
     }
     stages {
