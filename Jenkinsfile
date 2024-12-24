@@ -6,7 +6,7 @@ pipeline {
             steps {
                 cleanWs()
                 script {
-                        echo "env.BRANCH_NAME : ${env.BRANCH_NAME} and env.JOB_NAME : ${env.JOB_NAME} and workspace is ${$WORKSPACE}"
+                        echo "env.BRANCH_NAME : ${env.BRANCH_NAME} and env.JOB_NAME : ${env.JOB_NAME} and workspace is ${WORKSPACE}"
                     }
             }
         }
