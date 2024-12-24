@@ -2,7 +2,7 @@ pipeline {
     agent {
         node {
             label 'main'
-            customWorkspace "D:/Jenkins/workspace"
+            customWorkspace '/GCDS/'
         }
     }
     
