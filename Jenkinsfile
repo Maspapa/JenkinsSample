@@ -2,7 +2,6 @@ pipeline {
     agent {
         node {
             label 'main'
-            customWorkspace "C:/Users/MasonLiu/.jenkins/workspace/${env.JOB_NAME}"
         }
     }
     stages {
