@@ -2,8 +2,7 @@ pipeline {
     agent any
     
     environment {
-        WORKSPACE = "D:/Jenkins/workspace/${env.JOB_NAME}"
-        WORKSPACEDir ="D:/Jenkins/workspace/${env.JOB_NAME}"
+        WORKSPACEDIR ="D:/Jenkins/workspace/${env.JOB_NAME}"
     }
     stages {
         stage('Clean Workspace') { 
