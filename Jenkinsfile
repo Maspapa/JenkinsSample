@@ -5,7 +5,6 @@ pipeline {
             customWorkspace '/GCDS/'
         }
     }
-    
     stages {
         stage('Clean Workspace') { 
             steps {
