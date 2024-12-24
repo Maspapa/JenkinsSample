@@ -1,9 +1,6 @@
 pipeline {
     agent any
     
-    environment {
-        WORKSPACEDIR ="D:/Jenkins/workspace/${env.JOB_NAME}"
-    }
     stages {
         stage('Clean Workspace') { 
             steps {
