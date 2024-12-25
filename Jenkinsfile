@@ -10,7 +10,7 @@ pipeline {
             steps {
                 cleanWs()
                 script {
-                        echo "env.BRANCH_NAME : ${env.BRANCH_NAME} and env.JOB_NAME : ${env.JOB_NAME} and workspace is ${WORKSPACE} and JENKINS_HOME is  ${env.JENKINS_HOME}"
+                        echo "env.BRANCH_NAME : ${env.BRANCH_NAME} and env.JOB_NAME : ${env.JOB_NAME.replace("/", "\\")} and workspace is ${WORKSPACE} and JENKINS_HOME is  ${env.JENKINS_HOME}"
                     }
             }
         }
