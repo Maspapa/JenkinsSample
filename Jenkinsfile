@@ -2,7 +2,7 @@ pipeline {
     agent {
         node {
             label 'main'
-            customWorkspace "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}".replaceAll('/', '\\')
+            customWorkspace "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}"
         }
     }
     stages {
